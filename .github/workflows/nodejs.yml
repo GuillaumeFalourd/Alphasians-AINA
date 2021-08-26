@@ -24,6 +24,8 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
+          
+      - run: npm install discord.js@12 discord.js-commando
 
       - name: Install Dependencies
         run: npm ci
